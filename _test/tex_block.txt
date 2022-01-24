@@ -1,0 +1,82 @@
+1: Base
+//- - - - - - - - -//
+$${
+E=mc^2
+}$$
+//- - - - - - - - -//
+<p><span>$${
+E=mc^2
+}$$</span></p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+2: Can be a single line
+//- - - - - - - - -//
+$${E=mc^2}$$
+//- - - - - - - - -//
+<p><span>$${
+E=mc^2
+}$$</span></p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+3: Can be multiple lines
+//- - - - - - - - -//
+$${
+E=mc^2
+e^{i\pi} + 1 = 0
+}$$
+//- - - - - - - - -//
+<p><span>$${
+E=mc^2
+e^{i\pi} + 1 = 0
+}$$</span></p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+4: Delimiters cannot span lines
+//- - - - - - - - -//
+$$
+{ E=mc^2
+}$$
+//- - - - - - - - -//
+<p>$$
+{ E=mc^2
+}$$</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+5: Only whitespace character can be followed by the end delimiter
+//- - - - - - - - -//
+$${
+E=mc^2
+}$$ Non-whitespace characters cannot be terminated
+}$$   
+
+//- - - - - - - - -//
+<p><span>$${
+E=mc^2
+}$$ Non-whitespace characters cannot be terminated
+}$$</span></p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+6: There can be no blank rows
+//- - - - - - - - -//
+$${
+E=mc^2
+
+e^{i\pi} + 1 = 0
+}$$
+//- - - - - - - - -//
+<p>$${
+E=mc^2</p>
+<p>e^{i\pi} + 1 = 0
+}$$</p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
+
+7: Must be escape `<` `>` `&`
+//- - - - - - - - -//
+$${
+< > &
+}$$
+//- - - - - - - - -//
+<p><span>$${
+&lt; &gt; &amp;
+}$$</span></p>
+//= = = = = = = = = = = = = = = = = = = = = = = =//
